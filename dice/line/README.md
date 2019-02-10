@@ -26,10 +26,10 @@ def evaluate(counts):
     deltas = {k:abs(v - emean) for (k,v) in counts.items()}
     # define errors to be deltas relative to the expected mean
     errors = {k:(v / emean) for (k,v) in deltas.items()}
-    
+
     max_err  = max(errors.values())
     mean_err = sum(errors.values()) / len(errors)
-    
+
     return (max_err, mean_err)
 
 
@@ -38,7 +38,7 @@ for num_dice in range(1,8+1):
     counts = get_counts(num_dice)
     (max_err, mean_err) = evaluate(counts)
     results.append((num_dice, max_err, mean_err))
-    
+
 results
 ```
 
@@ -70,5 +70,5 @@ plt.show()
 ```
 
 
-![png](output_1_0.png)
+![png](https://github.com/jheiv/ic-gists/blob/master/dice/line/error-vs-dice.png)
 
