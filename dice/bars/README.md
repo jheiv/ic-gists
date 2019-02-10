@@ -56,7 +56,7 @@ def make_histogram(results, num_dice):
 
     ax.set_title(f"Distribution, {num_dice} dice")
     ax.set_xlabel("Result")
-    ax.set_ylabel("Occurrances")
+    ax.set_ylabel("Occurrences")
 
     ax.bar(*zip(*counts.items()))
 
